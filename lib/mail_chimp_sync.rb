@@ -31,7 +31,7 @@ module MailChimpSync
           @user.save # this probably isn't kosher in an after-filter method
       rescue Hominid::APIError => e
           # TODO alert someone there is a problem with mailchimp
-         logger.warn "MailChimp::Sync: Failed to create contact #{id} in mailchimp: #{e.message}"
+         logger.warn "MailChimp::Sync: Failed to create contact in mailchimp: #{e.message}"
       end
 
       # run before_update, but we don't want to do this everytime
